@@ -1,71 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detalles del Libro</title>
-  <link rel="stylesheet" href="book-details.css">
+  <link rel="stylesheet" href="book-details.css"> 
 </head>
 <body>
   <header>
     <h1>Detalles del Libro</h1>
   </header>
+
+  <div id="book-detail" class="book-detail">
+    <img src="img/gabriel-garcia.avif" alt="gabriel-garcia" style="width: 130px; height: 80;">
+    <h2>Cien años de soledad.</h2>
+    <p><strong>Autor:</strong> Gabriel García Márquez</p>
+      <p><strong>Año:</strong> 1967</p>
+    <p><strong>Género:</strong> Realismo Mágico</p>
+    <p><strong>Descripción:</strong> La historia de la familia Buendía en el pueblo ficticio de Macondo.</p>
+    <a href="index.html" class="btn">Volver a la Lista</a>
+  </div>
+  
+
   <main>
     <div id="book-detail" class="book-detail">
       <!-- Aquí se llenará la información del libro con JavaScript -->
     </div>
   </main>
+
+
   <footer>
-    <p>&copy; 2024 Biblioteca Online</p>
+    <p>&copy; 2025 ConectaLibros</p>
   </footer>
 
-  <script>
-    // Datos de los libros
-    const books = [
-      {
-        id: 1,
-        title: "El Principito",
-        author: "Antoine de Saint-Exupéry",
-        year: 1943,
-        genre: "Ficción",
-        description: "Un clásico de la literatura sobre un pequeño príncipe y sus aventuras.",
-        cover: "el_principito.jpg"
-      },
-      {
-        id: 2,
-        title: "Cien Años de Soledad",
-        author: "Gabriel García Márquez",
-        year: 1967,
-        genre: "Realismo Mágico",
-        description: "La historia de la familia Buendía en el pueblo ficticio de Macondo.",
-        cover: "cien_anos.jpg"
-      }
-    ];
-
-    // Obtener el parámetro 'id' de la URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const bookId = parseInt(urlParams.get("id"));
-
-    // Buscar el libro con el id correspondiente
-    const book = books.find(b => b.id === bookId);
-
-    if (book) {
-      // Si encontramos el libro, mostramos sus detalles
-      document.getElementById("book-detail").innerHTML = `
-        <img src="assets/${book.cover}" alt="${book.title}">
-        <h2>${book.title}</h2>
-        <p><strong>Autor:</strong> ${book.author}</p>
-        <p><strong>Año:</strong> ${book.year}</p>
-        <p><strong>Género:</strong> ${book.genre}</p>
-        <p><strong>Descripción:</strong> ${book.description}</p>
-        <a href="index.html" class="btn">Volver a la Lista</a>
-      `;
-    } else {
-      // Si no encontramos el libro, mostramos un mensaje de error
-      document.getElementById("book-detail").innerHTML = `
-        <p>Libro no encontrado. <a href="index.html" class="btn">Volver a la lista</a></p>
-      `;
-    }
-  </script>
+  <!-- Asegúrate de que el archivo script.js esté correctamente vinculado -->
+  <script src="script.js"></script>
 </body>
 </html>
+
