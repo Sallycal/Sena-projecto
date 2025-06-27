@@ -1,12 +1,12 @@
 <?php
 
-include 'conexion_be.php' ;
+    include 'conexion_be.php' ;
 
-$nombre_completo = $_POST['nombre_completo'];
-$correo = $_POST['correo'];
-$confirmar_correo = $_POST['confirmar_correo'];
-$contraseña = $_POST['contraseña'];
-$confirmar_contraseña = $_POST['confirmar_contraseña'];
+    $nombre_completo = $_POST['nombre_completo'];
+    $correo = $_POST['correo'];
+    $confirmar_correo = $_POST['confirmar_correo'];
+    $contraseña = $_POST['contraseña'];
+    $confirmar_contraseña = $_POST['confirmar_contraseña'];
 
     $query = "INSERT INTO usuarios(nombre_completo, correo, confirmar_correo, contraseña, confirmar_contraseña)
          VALUES('$nombre_completo', '$correo', '$confirmar_correo', '$contraseña', '$confirmar_contraseña' "

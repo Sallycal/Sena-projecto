@@ -32,5 +32,4 @@ document.addEventListener("DOMContentLoaded", function() {
         alert("Registro exitoso. ¡Bienvenido a ConectaLibros!");
         this.submit();
     });
-});
-
+}); 
